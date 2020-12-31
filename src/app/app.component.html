@@ -1,4 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>{{title}}</h1>
+
+<input type="text" id="txt" (change)="bye()"/>
+<button id="btn" class="btn btn-success" (click)="hello()">Okay</button>
+<br>
+<p *ngIf="loginFlag; else demo1">Successfully loged in</p>
+<ng-template *demo1> Please login again to continue </ng-template>
+
+<p>{{name}}</p>
